@@ -4,7 +4,7 @@ set -e
 
 while true
 do
-  KEY="bhga-sfzg-mm33-t5bt-2fkx"
+  KEY="133p-kzhr-cs81-uc3x-0dxg"
   ffmpeg -loglevel info -y -re \
     -f image2 -loop 1 -i jake-lofi-adventure-time_1920x1080_xtrafondos.com.jpg \
     -f concat -safe 0 -i <((for f in ./mp3/*.mp3; do path="$PWD/$f"; echo "file ${path@Q}"; done) | shuf) \
