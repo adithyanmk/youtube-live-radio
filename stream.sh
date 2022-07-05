@@ -6,7 +6,7 @@ while true
 do
   KEY="bhga-sfzg-mm33-t5bt-2fkx"
   ffmpeg -loglevel info -y -re \
-    -f image2 -loop 1 -i wp5329569-3840x2160-summer-wallpapers.jpg \
+    -f image2 -loop 1 -i jake-lofi-adventure-time_1920x1080_xtrafondos.com.jpg \
     -f concat -safe 0 -i <((for f in ./mp3/*.mp3; do path="$PWD/$f"; echo "file ${path@Q}"; done) | shuf) \
     -c:v libx264 -preset veryfast -b:v 3000k -maxrate 3000k -bufsize 6000k \
     -framerate 25 -video_size 1280x720 -vf "format=yuv420p" -g 50 -shortest -strict experimental \
